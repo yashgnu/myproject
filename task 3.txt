@@ -1,0 +1,94 @@
+#include <iostream>
+#include <cstring>
+#include <string>
+using namespace std;
+class CMS
+{
+    public:
+    int cu_no,quan[50],itemnumber[50];
+    string cu_name[200],cu_add[100],dateOfSale;
+    //public:
+    int it_no[20]={1,2,3,4,5,6,7,8,9,10};
+    string it_name[100]={"Chocolate", "Milk", "Apricots", "Bananas", "Juice", "Blueberry", "bing cherry", "Cherries", "Muskmelon", "Clementine"};
+    string it_des[100]={"item in pieces","available in liters","available in Kg","available in kg","available in liters","available in kg","available in kg","available in kg","available in kg","available in kg"};
+    string unit[100]={"Gram", "Liter", "Kg", "Kg", "Liter", "Kg", "Kg", "Kg", "Kg", "Kg"};
+    int price[15]={20, 16, 100, 20, 40, 120, 200, 70, 300, 250};
+    string stock_avail[100]={"available", "available", "not available", "available", "available", "not available", "available", "available", "available", "available"};
+    int tex_per[15]={10, 20, 30, 40, 30, 25, 30, 25, 10, 15};
+    int disco[15]={10, 20, 30, 40, 50, 15, 25, 30, 20,30};
+    int quan_sold[15]={10,20,30,40,50,60,70,80,90,100};
+    void CMS1()
+    {
+            cout<<"enter the today's date";
+            cin>>dateOfSale;
+    }
+
+    public:
+        void task3()
+        {
+
+            for(int i=0;i<10;i++)//1
+              {
+                        if(quan_sold[i]<70)
+                        {
+                            cout<<endl<<it_des[i];
+                        }
+              }
+
+
+            cout<<endl<<"|=========================================================|"<<endl;
+            cout<<"|the items which are currently not available in the stock.|"<<endl;
+            cout<<"|=========================================================|"<<endl;
+                for(int i=0;i<10;i++)//2
+              {
+                        if(stock_avail[i]=="not available")
+                        {
+                            cout<<endl<<it_name[i];
+                        }
+              }
+
+
+        }
+
+    void getdata()
+    {
+        cu_no++;
+        cout<<endl<<"enter your name:";
+        //getline(cin,cu_name[cu_no]);
+        cin>>cu_name[cu_no];
+        //cin.getline(cu_name,100);
+        cout<<endl<<"enter your address"<<endl;
+        //getline(cin,cu_add[cu_no]);
+        cin>>cu_add[cu_no];
+        //cin.getline(cu_add,100);
+        cout<<"enter the item number you want to purchase"<<endl;
+        cin>>itemnumber[cu_no];
+        cout<<"enter the quantity"<<endl;
+        cin>>quan[cu_no];
+    }
+
+
+   void disp()
+    {
+        cout<<"================================="<<endl;
+        cout<<"Name is:- "<<cu_name[cu_no];
+        cout<<"Address is:- "<<cu_add[cu_no];
+        cout<<"Item number:- "<<itemnumber[cu_no];
+        cout<<"quantity is:- "<<quan[cu_no];
+    }
+
+};
+
+int main()
+{
+    CMS c1;
+
+     for(int i=1;i<=5;i++)
+     {
+         c1.getdata();
+     }
+    c1.data();
+    c1.task3();
+
+        return 0;
+}
