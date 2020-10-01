@@ -1,3 +1,3 @@
-# myproject
+# My first ever project
 
-In this project we made parking management system
+This project i made in my collage when i started coding an it was made in 2018 using c++ language
